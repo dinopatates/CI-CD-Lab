@@ -22,9 +22,6 @@ jobs:
         - name: install lint
           run: make start-eslint-backend
 
-        - name: test backend
-          run: make test-backend
-
         - run: make hello
 
     quality-frontend:
@@ -46,3 +43,19 @@ jobs:
 
         - run: make hello
 
+    test-backend:
+      runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v4
+
+        - uses: actions/setup-node@v4
+          with:
+            node-version: 20
+            cache: 'npm'
+
+        - name: install dependencies
+          run: make install-backend-dependencies
+
+        - name: test backend
+          run: make test-backend
