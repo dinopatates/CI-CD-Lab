@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import Navbar from "../src/components/Navbar.jsx";
+import Navbar from "../components/Navbar.jsx";
 
 const mockUser = { username: "testuser", email: "test@example.com" };
 const mockOnLogout = jest.fn();

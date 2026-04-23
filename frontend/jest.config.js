@@ -1,10 +1,11 @@
 module.exports = {
   testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/__tests__/setupTests.js"],
+  // Fixed the path below: added a '/' between src and __tests__
+  setupFilesAfterEnv: ["<rootDir>/src/__tests__/setupTests.js"],
   moduleNameMapper: {
-    "^import.meta.env$": "<rootDir>/__tests__/__mocks__/importMeta.js",
+    "^import.meta.env$": "<rootDir>/src/__tests__/__mocks__/importMeta.js",
     "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-      "<rootDir>/__tests__/__mocks__/fileMock.js",
+      "<rootDir>/src/__tests__/__mocks__/fileMock.js",
     "\\.(css|less|scss|sass)$": "identity-obj-proxy",
   },
   transform: {
