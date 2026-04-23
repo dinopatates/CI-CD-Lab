@@ -56,7 +56,8 @@ jobs:
 
         - name: install dependencies
           run: make install-backend-dependencies
-          run: make install-frontend-dependencies
+
+        - run: make install-frontend-dependencies
 
         - name: test backend
           run: make test-backend
