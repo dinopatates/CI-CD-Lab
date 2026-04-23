@@ -29,3 +29,13 @@ jobs:
           tags: |
             gustavedoc/ci-cd-lab:backend-latest
             gustavedoc/ci-cd-lab:backend-${{ github.sha }}
+
+      - name: Build and push frontend image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./frontend
+          file: ./frontend/Dockerfile
+          push: true
+          tags: |
+            gustavedoc/ci-cd-lab:frontend-latest
+            gustavedoc/ci-cd-lab:frontend-${{ github.sha }}
