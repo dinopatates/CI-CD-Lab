@@ -8,6 +8,9 @@ install:
 install-backend-dependencies:
 	cd backend && npm install
 
+install-frontend-dependencies:
+	cd frontend && npm install
+
 start:
 	docker compose up -d --build
 
@@ -47,4 +50,7 @@ restart-phpmyadmin:
 
 start-eslint-backend:
 	cd backend && npm run lint
+
+start-eslint-frontend:
+	cd frontend && npm run lint
 
