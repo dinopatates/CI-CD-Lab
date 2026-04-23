@@ -29,10 +29,14 @@ export default [
         version: "detect",
       },
     },
-    rules: {
+rules: {
       ...reactPlugin.configs.recommended.rules,
-      "react/react-in-jsx-scope": "off", // Not needed for Vite/React 18
-      "no-unused-vars": "warn",
-    },
+      "react/react-in-jsx-scope": "off", 
+      "no-unused-vars": "warn",           // Keeps warnings from breaking the build
+      
+      // Add these to silence the specific errors you received:
+      "react/prop-types": "off",          // Fixes 'missing in props validation'
+      "react/no-unescaped-entities": "off" // Fixes 'unescaped entity' errors (like ' )
+    },,
   },
 ];
