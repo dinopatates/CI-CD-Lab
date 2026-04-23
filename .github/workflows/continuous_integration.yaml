@@ -1,6 +1,10 @@
 name: continuous_integration
 on:
-  jobs:
+  push:
+  pull_request:
+
+
+jobs:
     quality:
       runs-on: ubuntu-latest
 
