@@ -4,39 +4,39 @@ import reactPlugin from "eslint-plugin-react";
 
 export default [
   {
-    ignores: ["dist/**", "node_modules/**"],
+    // Ignore build files and dependencies
+    ignores: ["dist/**", "node_modules/**"]
   },
   js.configs.recommended,
   {
     files: ["**/*.{js,jsx}"],
     plugins: {
-      react: reactPlugin,
+      react: reactPlugin
     },
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
       globals: {
         ...globals.browser,
+        ...globals.node
       },
       parserOptions: {
         ecmaFeatures: {
-          jsx: true, // This fixes the "Unexpected token <" error
-        },
-      },
+          jsx: true
+        }
+      }
     },
     settings: {
       react: {
-        version: "detect",
-      },
+        version: "detect"
+      }
     },
-rules: {
+    rules: {
       ...reactPlugin.configs.recommended.rules,
-      "react/react-in-jsx-scope": "off", 
-      "no-unused-vars": "warn",           // Keeps warnings from breaking the build
-      
-      // Add these to silence the specific errors you received:
-      "react/prop-types": "off",          // Fixes 'missing in props validation'
-      "react/no-unescaped-entities": "off" // Fixes 'unescaped entity' errors (like ' )
-    },,
-  },
+      "react/react-in-jsx-scope": "off",
+      "no-unused-vars": "warn",
+      "react/prop-types": "off",
+      "react/no-unescaped-entities": "off"
+    }
+  }
 ];
