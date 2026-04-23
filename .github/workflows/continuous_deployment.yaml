@@ -27,5 +27,5 @@ jobs:
           file: ./backend/Dockerfile
           push: true
           tags: |
-            gustave-doc/ci-cd-lab:backend-latest
-            gustave-doc/ci-cd-lab:backend-${{ github.sha }}
+            gustavedoc/ci-cd-lab:backend-latest
+            gustavedoc/ci-cd-lab:backend-${{ github.sha }}
