@@ -5,6 +5,12 @@ install:
 	copy .env.example .env
 	cd frontend && copy .env.example .env
 
+install-backend-dependencies:
+	cd backend && npm install
+
+install-frontend-dependencies:
+	cd frontend && npm install
+
 start:
 	docker compose up -d --build
 
@@ -44,4 +50,13 @@ restart-phpmyadmin:
 
 start-eslint-backend:
 	cd backend && npm run lint
+
+start-eslint-frontend:
+	cd frontend && npm run lint
+
+test-backend:
+	cd backend && npm run test
+
+test-frontend:
+	cd frontend && npm run test
 
