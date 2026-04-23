@@ -18,7 +18,8 @@ export default [
       sourceType: "module",
       globals: {
         ...globals.browser,
-        ...globals.node
+        ...globals.node,
+        ...globals.jest // Adds support for Jest global variables (test, expect, etc.)
       },
       parserOptions: {
         ecmaFeatures: {
