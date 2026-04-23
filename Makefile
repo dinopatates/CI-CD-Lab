@@ -54,3 +54,6 @@ start-eslint-backend:
 start-eslint-frontend:
 	cd frontend && npm run lint
 
+test-backend:
+	cd backend && npm run test
+
