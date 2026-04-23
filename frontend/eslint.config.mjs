@@ -35,6 +35,7 @@ export default [
       ...reactPlugin.configs.recommended.rules,
       "react/react-in-jsx-scope": "off",
       "no-unused-vars": "warn",
+      "no-undefined": "warn",
       "react/prop-types": "off",
       "react/no-unescaped-entities": "off"
     }
