@@ -5,6 +5,9 @@ install:
 	copy .env.example .env
 	cd frontend && copy .env.example .env
 
+install-backend-dependencies:
+	cd backend && npm install
+
 start:
 	docker compose up -d --build
 

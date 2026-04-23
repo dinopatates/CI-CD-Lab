@@ -16,6 +16,9 @@ jobs:
             node-version: 20
             cache: 'npm'
 
+        - name: install dependencies
+          run: make install-backend-dependencies
+
         - name: install lint
           run: make start-eslint-backend
 
