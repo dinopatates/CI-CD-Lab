@@ -43,7 +43,7 @@ jobs:
 
         - run: make hello
 
-    test-backend:
+    test:
       runs-on: ubuntu-latest
 
       steps:
@@ -59,3 +59,6 @@ jobs:
 
         - name: test backend
           run: make test-backend
+
+        - name: test frontend
+          run: make test-frontend

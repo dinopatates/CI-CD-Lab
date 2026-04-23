@@ -57,3 +57,6 @@ start-eslint-frontend:
 test-backend:
 	cd backend && npm run test
 
+test-frontend:
+	cd frontend && npm run test
+
